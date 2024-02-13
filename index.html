@@ -8,8 +8,9 @@
 </head>
 <body>
     <div class="container">
-        <!-- <div class="logo-alura"> <img src="img/logo-alura.svg" alt="logo da alura"></div> -->
+        
         <div class="decodificar">
+            <div class="logo-alura"> <img src="img/logo-alura.svg" alt="logo da alura"></div>
             <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Digite aqui seu texto"></textarea>
         </div>
         <div class="info">
@@ -25,7 +26,7 @@
         <div class="mensagem-encriptografada" id="mensagem-encriptografada">
             <h2 id="titulo-mensagem">Nenhuma mensagem encontrada</h2>
             <p id="paragrafo-mensagem">Digite um texto que você deseja criptografar ou descriptografar.</p>
-            <!--<textarea name="mensagem" id="mensagem" cols="30" rows="10" class="mensagem"></textarea> -->
+            <button class="copy" id="copy" type="button" onclick="copy()"> Copiar </button>
         </div>
     </div>
 </body>

@@ -44,3 +44,10 @@
                 alert("Deve inserir algum texto")  
             }
     }   
+
+    function copy(){
+        document.getElementById("copy").addEventListener('click', copy)
+        document.querySelector("#texto").select()
+        document.execCommand("copy")
+        alert('Texto copiado para a área de trabalho.')
+    }
