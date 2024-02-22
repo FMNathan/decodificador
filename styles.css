@@ -82,6 +82,9 @@
     line-height: 19px;
     text-align: center;
     cursor: pointer;
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transition-timing-function: linear;
 }
 .btn-descriptografar{
     box-sizing: border-box;
@@ -102,13 +105,15 @@
     line-height: 19px;
     text-align: center;
     cursor: pointer;
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transition-timing-function: linear;
 }
 .copy{
     align-items: center;
     justify-content: center;
     padding: 24px;
-    gap: 8px;
-    width: 336px;
+    width:  70%;
     height: 67px;
     background-color: #D8DFE8;
     color: #0A3871;
@@ -120,11 +125,15 @@
     line-height: 19px;
     text-align: center;
     cursor: pointer;
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transition-timing-function: linear;
 }
 .btn-criptografar:hover, .btn-descriptografar:hover{
-    margin: 0.3%;
-    width: 24.5%;
-    padding: 1.8%;
+    transform: translateY(-10px);    
+}
+.copy:hover{
+    transform: translateY(-10px);
 }
 .criptografado{
     display: flex;
@@ -144,7 +153,7 @@
     align-items: center;
     justify-content: center;
     padding: 1%;
-    gap: 16px;
+    gap: 30px;;
     position: absolute;
     width: 100%;
     top: 65%;
@@ -170,13 +179,71 @@
 }
 .criptografado img{
     position: absolute;
-    width: 80%;
-    height: 50%;
-    top: 15%;
+    width: 60%;
+    height: 35%;
+    top: 20%;
 }
 
 /* Responsive Design */
-@media (max-width: 57.5rem){
+@media only screen and (max-width: 600px){ 
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.decodificar{
+    width: 100%;
+}
+.texto{
+    width: 80%:
+    height: 60%;
+    left: 10%;
+    top: 5%;
+}
+.info, .copy{
+    width: 80%;
+    left: 10%;
+    top: 67%;
+}
+.info p{
+    font-size: 1rem;
+}
+.buttons{
+    width: 80%;
+    left: 10%;
+    top: 70%;
+}
+.logo-alura{
+    display: none;
+    visibility: hidden;
+}
+.btn-criptografar, .btn-descriptografar, .copy{
+    width: 48%;
+    border-radius: 16px;
+}
+.btn-criptografar:hover, .btn-descriptografar:hover, .copy:hover{
+    margin: 0.3%;
+    width: 47.5%;
+    padding: 1.8%;
+}
+.criptografado, .copy{
+    width: 80%;
+    height: 19%;
+    left: 10%;
+    top: 80%;
+}
+.mensagem-encriptografada, .info p{
+    width: 100%;
+    top: 5%;
+}
+.criptografado img{
+    top: 0;
+    display: none;
+    visibility: hidden;
+}
+}
+
+
+@media only screen and (max-width: 900px){
     .container{
         display: flex;
         flex-direction: row;
@@ -185,12 +252,12 @@
         width: 100%;
     }
     .texto{
-        width: 100%;
+        width: 80%:
         height: 60%;
         left: 10%;
         top: 5%;
     }
-    .info{
+    .info, .copy{
         width: 80%;
         left: 10%;
         top: 67%;
@@ -201,36 +268,34 @@
     .buttons{
         width: 80%;
         left: 10%;
-        top: 60%;
+        top: 70%;
     }
-    .btn-criptografar, .btn-descriptografar{
+    .logo-alura{
+        display: none;
+        visibility: hidden;
+    }
+    .btn-criptografar, .btn-descriptografar, .copy{
         width: 48%;
         border-radius: 16px;
     }
-    .copy{
-        width: 48%;
-        border-radius: 16px;        
-    }
-    /*.btn-criptografar:hover, .btn-descriptografar:hover, .copy:hover{
-        margin: 0.3%
+    .btn-criptografar:hover, .btn-descriptografar:hover, .copy:hover{
+        margin: 0.3%;
         width: 47.5%;
         padding: 1.8%;
     }
-    */
-    .criptografado{
+    .criptografado, .copy{
         width: 80%;
-        height: 15%;
+        height: 19%;
         left: 10%;
         top: 80%;
     }
-    .mensagem-encriptografada{
+    .mensagem-encriptografada, .info p{
         width: 100%;
-        top: -60%;
+        top: 5%;
     }
     .criptografado img{
         top: 0;
         display: none;
         visibility: hidden;
     }
-
 }

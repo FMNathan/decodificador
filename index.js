@@ -2,7 +2,7 @@
         let texto = document.getElementById("texto").value
         let tituloMensagem = document.getElementById("titulo-mensagem")
         let paragrafo = document.getElementById("paragrafo-mensagem")
-        
+        let boneco = document.getElementById("boneco")
 
         let textoCripto = texto
             .replace(/e/gi, "enter")
@@ -15,12 +15,15 @@
             document.getElementById("texto").value = textoCripto
             tituloMensagem.textContent = "Texto criptografado com sucesso!"
             paragrafo.textContent = ""
+            boneco.src = "./img/padlock.png"
         } else{
             tituloMensagem.textContent = "Nenhuma mensagem encontrada"
             paragrafo.textContent = "Digite um texto que você deseja criptografar ou descriptografar."
+            boneco.src = "img/main-img.svg"
             alert("Deve inserir algum texto")
         }
-    } 
+    }
+        
 
     function descriptografar(){
         let texto = document.getElementById("texto").value
@@ -36,10 +39,12 @@
 
             if (texto.length != 0){
                 document.getElementById("texto").value = textoCripto
+                boneco.src = "./img/open-padlock.png"
                 tituloMensagem.textContent = "Texto descriptografado com sucesso!"
                 paragrafo.textContent = ""
             } else{
                 tituloMensagem.textContent = "Nenhuma mensagem encontrada"
+                boneco.src = "img/main-img.svg"
                 paragrafo.textContent = "Digite um texto que você deseja criptografar ou descriptografar."
                 alert("Deve inserir algum texto")  
             }
@@ -50,4 +55,4 @@
         document.querySelector("#texto").select()
         document.execCommand("copy")
         alert('Texto copiado para a área de trabalho.')
-    }
+}
