@@ -15,7 +15,7 @@
             document.getElementById("texto").value = textoCripto
             tituloMensagem.textContent = "Texto criptografado com sucesso!"
             paragrafo.textContent = ""
-            boneco.src = "./img/padlock.png"
+            boneco.src = "./img/lock.svg"
         } else{
             tituloMensagem.textContent = "Nenhuma mensagem encontrada"
             paragrafo.textContent = "Digite um texto que você deseja criptografar ou descriptografar."
@@ -39,7 +39,7 @@
 
             if (texto.length != 0){
                 document.getElementById("texto").value = textoCripto
-                boneco.src = "./img/open-padlock.png"
+                boneco.src = "./img/lock-unlocked.svg"
                 tituloMensagem.textContent = "Texto descriptografado com sucesso!"
                 paragrafo.textContent = ""
             } else{
