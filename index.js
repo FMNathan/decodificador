@@ -48,11 +48,11 @@
                 paragrafo.textContent = "Digite um texto que você deseja criptografar ou descriptografar."
                 alert("Deve inserir algum texto")  
             }
-    }   
-
-    function copy(){
+    }
+    
+     function copy(){
         document.getElementById("copy").addEventListener('click', copy)
         document.querySelector("#texto").select()
         document.execCommand("copy")
-        alert('Texto copiado para a área de trabalho.')
-}
+        alert('Texto copiado para a área de trabalho')
+    }
