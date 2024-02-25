@@ -41,7 +41,7 @@
     padding: 0px;
     gap: 8px;
     position: absolute;
-    width: 80%;
+    width: 78%;
     left: 12%;
     top: 80%;
 }
@@ -62,7 +62,7 @@
     align-items: flex-start;
     padding: 1% 0;
     position: absolute;
-    width: 80%;
+    width: 78%;
     left: 12%;
     top: 82%;
     gap: 24px;
@@ -109,7 +109,7 @@
     transition-property: transform;
     transition-timing-function: linear;
 }
-.copy{
+.copiar{
     align-items: center;
     justify-content: center;
     padding: 24px;
@@ -132,7 +132,7 @@
 .btn-criptografar:hover, .btn-descriptografar:hover{
     transform: translateY(-10px);    
 }
-.copy:hover{
+.copiar:hover{
     transform: translateY(-10px);
 }
 .criptografado{
@@ -142,7 +142,7 @@
     width: 30%;
     height: 90%;
     left: 60%;
-    top: 5%;
+    top: 2%;
     background-color: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
@@ -153,7 +153,7 @@
     align-items: center;
     justify-content: center;
     padding: 1%;
-    gap: 30px;;
+    gap: 2rem;
     position: absolute;
     width: 100%;
     top: 65%;
@@ -183,12 +183,21 @@
     height: 35%;
     top: 20%;
 }
-
+.cabecalho{
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    left: 45%;
+    bottom: 1%;
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+}
 /* Responsive Design */
-@media only screen and (max-width: 600px){ 
+@media (max-width: 600px){
 .container{
     display: flex;
     flex-direction: row;
+    background: #FF5D73;
 }
 .decodificar{
     width: 100%;
@@ -199,7 +208,7 @@
     left: 10%;
     top: 5%;
 }
-.info, .copy{
+.info, .copiar{
     width: 80%;
     left: 10%;
     top: 67%;
@@ -216,16 +225,16 @@
     display: none;
     visibility: hidden;
 }
-.btn-criptografar, .btn-descriptografar, .copy{
+.btn-criptografar, .btn-descriptografar, .copiar{
     width: 48%;
     border-radius: 16px;
 }
-.btn-criptografar:hover, .btn-descriptografar:hover, .copy:hover{
+.btn-criptografar:hover, .btn-descriptografar:hover, .copiar:hover{
     margin: 0.3%;
     width: 47.5%;
     padding: 1.8%;
 }
-.criptografado, .copy{
+.criptografado, .copiar{
     width: 80%;
     height: 19%;
     left: 10%;
@@ -240,13 +249,19 @@
     display: none;
     visibility: hidden;
 }
+.cabecalho{
+    bottom: 1%;
+    width: 50%;
+    left: 30%;
+    color: #fff;
+}
 }
 
-
-@media only screen and (max-width: 900px){
+@media (max-width: 900px){
     .container{
         display: flex;
         flex-direction: row;
+        background: #339989;
     }
     .decodificar{
         width: 100%;
@@ -257,7 +272,7 @@
         left: 10%;
         top: 5%;
     }
-    .info, .copy{
+    .info, .copiar{
         width: 80%;
         left: 10%;
         top: 67%;
@@ -274,28 +289,34 @@
         display: none;
         visibility: hidden;
     }
-    .btn-criptografar, .btn-descriptografar, .copy{
+    .btn-criptografar, .btn-descriptografar, .copiar{
         width: 48%;
         border-radius: 16px;
     }
-    .btn-criptografar:hover, .btn-descriptografar:hover, .copy:hover{
+    .btn-criptografar:hover, .btn-descriptografar:hover, .copiar:hover{
         margin: 0.3%;
         width: 47.5%;
         padding: 1.8%;
     }
-    .criptografado, .copy{
+    .criptografado, .copiar{
         width: 80%;
-        height: 19%;
+        height: 13%;
         left: 10%;
         top: 80%;
     }
     .mensagem-encriptografada, .info p{
         width: 100%;
-        top: 5%;
+        top: 15%;
+        height: 60%;
+        gap: 1rem;
     }
     .criptografado img{
         top: 0;
         display: none;
         visibility: hidden;
+    }
+    .cabecalho{
+        bottom: 1%;
+        width: 50%;
     }
 }
