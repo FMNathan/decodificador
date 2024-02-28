@@ -2,16 +2,23 @@
 *{
     margin: 0;
     padding: 0;
+
+    --cor-primaria:#548DBF;
+    --cor-secundaria:#66ADD9;
+    --cor-button1:#3F4021;
+    --cor-button2:#8C4C35;
+    --cor-button3:#A3A660;
+    --color-p: #fff;
 }
 .logo-alura{
     display: flex;
-    padding: 50px 12%;
+    padding: 45px 10%;
 }
 .container{
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: #F3F5FC;
+    background-color: var(--cor-primaria);
 }
 .texto{
     position: absolute;
@@ -24,10 +31,11 @@
     font-size: 2rem;
     font-weight: 400;
     line-height: 48px;
-    background-color: #F3F5FC;
+    background-color: var(--cor-primaria);
+    color: var(--color-p);
 }
 .texto::placeholder{
-    color: #0A3871;
+    color: var(--color-p);
 }
 .texto:focus, .texto:active{
     border: none;
@@ -46,11 +54,11 @@
     top: 80%;
 }
 .info p{
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 18px;
     font-family: 'Inter', sans-serif;
-    color: #495057;
+    color: var(--color-p);
     opacity: 0.8;
     flex: none;
     order: 1;
@@ -73,8 +81,8 @@
     padding: 2%;
     gap: 8px;
     width: 25%;
-    background-color: #0A3871;
-    color: #FFFFFF;
+    background-color: var(--cor-button1);
+    color: var(--color-p);
     border-radius: 24px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -85,6 +93,7 @@
     transition-duration: 0.2s;
     transition-property: transform;
     transition-timing-function: linear;
+    border: none;
 }
 .btn-descriptografar{
     box-sizing: border-box;
@@ -95,9 +104,8 @@
     padding: 2%;
     gap: 8px;
     width: 25%;
-    background-color: #D8DFE8;
-    color: #0A3871;
-    border: 1px solid #0A3871;
+    background-color: var(--cor-button3);
+    color: var(--color-p);
     border-radius: 24px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -108,6 +116,7 @@
     transition-duration: 0.2s;
     transition-property: transform;
     transition-timing-function: linear;
+    border: none;
 }
 .copiar{
     align-items: center;
@@ -115,9 +124,8 @@
     padding: 24px;
     width:  70%;
     height: 67px;
-    background-color: #D8DFE8;
-    color: #0A3871;
-    border: 1px solid #0A3871;
+    background-color: var(--cor-primaria);
+    color: var(--color-p);
     border-radius: 24px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -128,6 +136,7 @@
     transition-duration: 0.2s;
     transition-property: transform;
     transition-timing-function: linear;
+    border: none;
 }
 .btn-criptografar:hover, .btn-descriptografar:hover{
     transform: translateY(-10px);    
@@ -143,9 +152,9 @@
     height: 90%;
     left: 60%;
     top: 2%;
-    background-color: #FFFFFF;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    border-radius: 32px;
+    background-color: var(--color-p);
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.700);
+    border-radius: 30px;
 }
 .mensagem-encriptografada{
     display: flex;
@@ -166,7 +175,7 @@
     font-size: 1.5rem;
     line-height: 29px;
     text-align: center;
-    color: #343A40;
+    color: var(--cor-button1);
 }
 .mensagem-encriptografada p{
     width: 80%;
@@ -175,7 +184,7 @@
     font-size: 1rem;
     line-height: 24px;
     text-align: center; 
-    color: #495057;
+    color: var(--cor-button1);
 }
 .criptografado img{
     position: absolute;
@@ -191,77 +200,19 @@
     bottom: 1%;
     font-family: Inter, sans-serif;
     font-size: 1rem;
+    color: var(--color-p);
 }
 /* Responsive Design */
-@media (max-width: 600px){
-.container{
-    display: flex;
-    flex-direction: row;
-    background: #FF5D73;
-}
-.decodificar{
-    width: 100%;
-}
-.texto{
-    width: 80%;
-    height: 60%;
-    left: 10%;
-    top: 5%;
-}
-.info, .copiar{
-    width: 80%;
-    left: 10%;
-    top: 67%;
-}
-.info p{
-    font-size: 1rem;
-}
-.buttons{
-    width: 80%;
-    left: 10%;
-    top: 70%;
-}
-.logo-alura{
-    display: none;
-    visibility: hidden;
-}
-.btn-criptografar, .btn-descriptografar, .copiar{
-    width: 48%;
-    border-radius: 16px;
-}
-.btn-criptografar:hover, .btn-descriptografar:hover, .copiar:hover{
-    margin: 0.3%;
-    width: 47.5%;
-    padding: 1.8%;
-}
-.criptografado, .copiar{
-    width: 80%;
-    height: 19%;
-    left: 10%;
-    top: 80%;
-}
-.mensagem-encriptografada, .info p{
-    width: 100%;
-    top: 5%;
-}
-.criptografado img{
-    top: 0;
-    display: none;
-    visibility: hidden;
-}
-.cabecalho{
-    bottom: 1%;
-    width: 50%;
-    left: 30%;
-    color: #fff;
-}
-}
-
-@media (max-width: 900px){
+@media(max-width: 400px){
     .container{
-        display: flex;
-        flex-direction: row;
-        background: #339989;
+        position: relative;
+        width: 101vw;
+        height: 100vh;
+        background-color: var(--cor-primaria);
+}
+    .logo-alura{
+        display: none;
+        visibility: hidden;
     }
     .decodificar{
         width: 100%;
@@ -271,44 +222,72 @@
         height: 60%;
         left: 10%;
         top: 5%;
+        background-color: var(--cor-primaria);
+        color: var(--color-p);
     }
-    .info, .copiar{
-        width: 80%;
-        left: 10%;
-        top: 67%;
+    .texto::placeholder{
+        color: var(--cor-p);
+        font-size: 1em;
+        opacity: 50%;
+    }
+    .info{
+        width: 85%;
+        left: 5%;
+        top: 65%;
     }
     .info p{
         font-size: 1rem;
+        color: var(--color-p);
     }
     .buttons{
-        width: 80%;
-        left: 10%;
-        top: 70%;
-    }
-    .logo-alura{
-        display: none;
-        visibility: hidden;
-    }
-    .btn-criptografar, .btn-descriptografar, .copiar{
-        width: 48%;
-        border-radius: 16px;
-    }
-    .btn-criptografar:hover, .btn-descriptografar:hover, .copiar:hover{
-        margin: 0.3%;
-        width: 47.5%;
-        padding: 1.8%;
-    }
-    .criptografado, .copiar{
-        width: 80%;
-        height: 13%;
-        left: 10%;
-        top: 80%;
-    }
-    .mensagem-encriptografada, .info p{
+        top: 75%;
+        gap: 16px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }    
+    .btn-criptografar, .btn-descriptografar{
         width: 100%;
-        top: 15%;
-        height: 60%;
+        border-radius: 20px;
+        border: none;
+        height: 60px;
+    }
+    .btn-criptografar{
+        background-color: var(--cor-button1);
+        color: var(--color-p);
+    }
+    .btn-descriptografar{
+        background-color: var(--cor-button2);
+        color: var(--color-p);
+    }
+    .copiar{
+        width: 50%;
+        border-radius: 16px;
+        border: none;
+        height: 60px;
+        background-color: var(--cor-button2);
+        color: var(--color-p);
+    }
+    .criptografado{
+        left: 0%;
+        top: 100vh;
+        background-color: var(--cor-primaria);
+        width: 101vw;
+        height: 300px;
+        border-radius: 0;
+    }
+    .mensagem-encriptografada{
+        top: 20px;
         gap: 1rem;
+        border-radius: 20px;
+    }
+    .mensagem-encriptografada h2{
+        color: var(--color-p);
+        width: 100%;
+    }
+    .mensagem-encriptografada p{
+        color: var(--color-p);
+        width: 100%;
     }
     .criptografado img{
         top: 0;
@@ -316,7 +295,27 @@
         visibility: hidden;
     }
     .cabecalho{
-        bottom: 1%;
-        width: 50%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        position: fixed;
+        margin: 0px;
+        padding: 1px;
+        left: 0%;
+        width: 100%;
+        bottom: 0px;
+        font-family: Inter, sans-serif;
+        font-size: 1rem;
+        color: var(--color-p);
+    }
+    .social-media img{
+        font-size: 1px;
+        
+    }
+    .social-media{
+        bottom: 0;
+        width: 100%;
+        display: flex;
     }
 }
+

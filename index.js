@@ -1,10 +1,12 @@
+let textoCripto;    
+    
     function criptografar(){
         let texto = document.getElementById("texto").value
         let tituloMensagem = document.getElementById("titulo-mensagem")
         let paragrafo = document.getElementById("paragrafo-mensagem")
         let boneco = document.getElementById("boneco")
 
-        let textoCripto = texto
+        textoCripto = texto
             .replace(/e/gi, "enter")
             .replace(/i/gi, "imes")
             .replace(/a/gi, "ai")
@@ -16,6 +18,8 @@
             tituloMensagem.textContent = "Texto criptografado com sucesso!"
             paragrafo.textContent = ""
             boneco.src = "./img/lock.svg"
+            document.getElementById("copiar").hidden = false
+            document.getElementById("copiar").disabled = false
         } else{
             tituloMensagem.textContent = "Nenhuma mensagem encontrada"
             paragrafo.textContent = "Digite um texto que você deseja criptografar ou descriptografar."
@@ -24,7 +28,6 @@
         }
     }
         
-
     function descriptografar(){
         let texto = document.getElementById("texto").value
         let tituloMensagem = document.getElementById("titulo-mensagem")
@@ -50,9 +53,16 @@
             }
     }
     
-     function copy(){
-        document.getElementById("copy").addEventListener('click', copy)
-        document.querySelector("#texto").select()
-        document.execCommand("copy")
-        alert('Texto copiado para a área de trabalho')
+    function copy() {
+        // Seleciona o texto
+        document.querySelector("#texto").select();
+    
+        // Copia o texto selecionado para a área de transferência
+        document.execCommand("copy");
+    
+        // Mostra uma mensagem de alerta informando que o texto foi copiado
+        alert('Texto copiado para a área de trabalho');
     }
+    
+    // Adiciona um ouvinte de evento ao botão "copiar" para chamar a função copy quando o botão for clicado
+    document.getElementById("copiar").addEventListener('click', copy);

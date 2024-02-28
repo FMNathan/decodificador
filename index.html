@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/icons8-lock-32.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <title>Decodificador de Texto</title>
 </head>
 <body>
     <div class="container">
         <div class="decodificar">
             <div class="logo-alura"> <img src="img/logo-alura.svg" alt="logo da alura"></div>
-            <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Digite aqui seu texto"></textarea>
+            <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Digite aqui seu texto..."></textarea>
         </div>
         <div class="info">
             <img src="img/vetor.svg" alt="imagem para chamar atenção referente a informação ao lado."><p>Apenas letras minúsculas e sem acento.</p>
@@ -26,11 +28,17 @@
         <div class="mensagem-encriptografada" id="mensagem-encriptografada">
             <h2 id="titulo-mensagem">Nenhuma mensagem encontrada</h2>
             <p id="paragrafo-mensagem">Digite um texto que você deseja criptografar ou descriptografar.</p>
-            <button class="copiar" id="copiar" type="button" hidden disabled> Copiar </button>
+            <button class="copiar" id="copiar" type="button" onclick="copy" hidden disabled> Copiar </button>
         </div>
     </div>
     <footer class="cabecalho">
         <p>Desenvolvido por Nathan Farias</p>
+        <!--<div class="social-media">
+            <img src="img/logo-github.svg" alt="logo logo-github">
+            <img src="img/logo-instagram.svg" alt="logo-instagram">
+            <img src="img/logo-linkedin.svg" alt="logo-linkedin">
+        </div>
+    -->
     </footer>
 </body>
 <script src="index.js"></script>
