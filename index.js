@@ -23,7 +23,7 @@ let textoCripto;
         } else{
             tituloMensagem.textContent = "Nenhuma mensagem encontrada"
             paragrafo.textContent = "Digite um texto que você deseja criptografar ou descriptografar."
-            boneco.src = "img/main-img.svg"
+            boneco.src = "img/curiosity-search.svg"
             alert("Deve inserir algum texto")
         }
     }
@@ -47,7 +47,7 @@ let textoCripto;
                 paragrafo.textContent = ""
             } else{
                 tituloMensagem.textContent = "Nenhuma mensagem encontrada"
-                boneco.src = "img/main-img.svg"
+                boneco.src = "img/curiosity-search.svg"
                 paragrafo.textContent = "Digite um texto que você deseja criptografar ou descriptografar."
                 alert("Deve inserir algum texto")  
             }
