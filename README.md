@@ -1,4 +1,4 @@
-<h1>Decodificador</h1>
+<h1>Decodificador de Texto</h1>
 
 <h2> 🗨️ Sobre</h2>
 <p>Esse projeto foi um desafio dos cursos da Alura junto com a Oracle, Decodificadr de texto. <br> Foi um enorme desafio, e estou muito grato por ter conseguido finaliza-lo,  agradeço a oportunidade de ambas as empresas pela oportunidade.</p>
